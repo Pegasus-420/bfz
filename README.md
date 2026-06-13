@@ -23,9 +23,3 @@ Run:
 
 zig build run
 
-Todo:
-
-- add output command
-- add input command
-- add loop handling
-- add command-line or file input
