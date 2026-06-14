@@ -1,25 +1,34 @@
 # bfz
 
-A tiny Brainfuck interpreter written in Zig.
+A small Brainfuck interpreter written in Zig.
 
-I am building this to understand how interpreters work internally.
+I built this to understand how interpreters work internally.
 
-Current version supports only the basic tape commands:
+Features:
 
-- + increases the current cell
-- - decreases the current cell
-- > moves the pointer right
-- < moves the pointer left
+- plus command increases the current cell
+- minus command decreases the current cell
+- right command moves the pointer right
+- left command moves the pointer left
+- dot command prints the current cell
+- comma command reads one byte of input
+- square brackets handle loops
 
-It uses a 30,000 byte tape, a data pointer, and an instruction pointer.
+The interpreter uses:
 
-Current hardcoded test program:
+- a 30000 byte tape
+- a data pointer
+- an instruction pointer
+- simple bracket matching
 
-+++>++<-
+Run examples:
 
-This makes cell 0 equal to 2 and cell 1 equal to 2.
+zig build run -- '+++>++<-'
 
-Run:
+zig build run -- '++++++++[>++++++++<-]>+.'
 
-zig build run
+printf 'Z' | zig build run -- ',.'
 
+Next step:
+
+- read Brainfuck code from a file
