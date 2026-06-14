@@ -29,6 +29,6 @@ zig build run -- '++++++++[>++++++++<-]>+.'
 
 printf 'Z' | zig build run -- ',.'
 
-Next step:
+
 
 
