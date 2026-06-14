@@ -31,4 +31,4 @@ printf 'Z' | zig build run -- ',.'
 
 Next step:
 
-- read Brainfuck code from a file
+
